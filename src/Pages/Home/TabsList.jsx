@@ -1,8 +1,14 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Lorry from './Tabs/Lorry';
+import Dump from './Tabs/Dump';
+import Mini from './Tabs/Mini';
 
-const TabsList = () => {
+const TabsList = ({allTrucks}) => {
+  const lorries = allTrucks?.filter(truck=> truck?.subCategory==="Truck Lorry");
+  const dumps = allTrucks?.filter(truck=> truck?.subCategory==="Dump Truck");
+  const miniTrucks = allTrucks?.filter(truck=> truck?.subCategory==="Mini Truck");
   return (
     <div>
       <Tabs>
@@ -13,13 +19,13 @@ const TabsList = () => {
         </TabList>
 
         <TabPanel>
-          <h2>Any content 1</h2>
+          <Lorry lorries={lorries}></Lorry>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+          <Dump dumps={dumps}></Dump>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 3</h2>
+          <Mini miniTrucks={miniTrucks}></Mini>
         </TabPanel>
       </Tabs>
     </div>

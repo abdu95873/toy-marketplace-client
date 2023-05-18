@@ -1,0 +1,243 @@
+[
+    {
+      "toyName": "Monster Truck Madness",
+      "price": 29.99,
+      "rating": 4.2,
+      "pictureUrl": "https://example.com/monster-truck-madness.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Monster Trucks",
+      "quantity": 20,
+      "toyDetails": "Experience the thrill of Monster Truck Madness with this action-packed toy. It features realistic design, oversized wheels, and high-speed performance. Suitable for ages 3 and up."
+    },
+    {
+      "toyName": "Construction King",
+      "price": 24.99,
+      "rating": 4.8,
+      "pictureUrl": "https://example.com/construction-king.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Construction Vehicles",
+      "quantity": 15,
+      "toyDetails": "Build and excavate with the Construction King truck toy. It comes with movable parts, a working crane, and realistic sound effects. Perfect for young builders aged 4 and above."
+    },
+    {
+      "toyName": "Off-Road Adventure Set",
+      "price": 39.99,
+      "rating": 4.6,
+      "pictureUrl": "https://example.com/off-road-adventure-set.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Off-Road Vehicles",
+      "quantity": 10,
+      "toyDetails": "Embark on thrilling off-road adventures with this set. It includes an off-road truck, accessories, and a playmat. Let your imagination run wild with this exciting toy set."
+    },
+    {
+      "toyName": "Big Rig Hauler",
+      "price": 34.99,
+      "rating": 4.4,
+      "pictureUrl": "https://example.com/big-rig-hauler.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Transportation",
+      "quantity": 8,
+      "toyDetails": "Get ready for long-haul journeys with the Big Rig Hauler. It features a detachable trailer and multiple compartments for storage. Perfect for little truck enthusiasts."
+    },
+    {
+      "toyName": "Fire Chief Rescue Truck",
+      "price": 19.99,
+      "rating": 4.7,
+      "pictureUrl": "https://example.com/fire-chief-rescue-truck.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Emergency Vehicles",
+      "quantity": 12,
+      "toyDetails": "Race to the rescue with the Fire Chief Rescue Truck. It has realistic lights, sounds, and an extendable ladder. Inspire heroic adventures with this fire truck toy."
+    },
+    {
+      "toyName": "Dump Truck Deluxe",
+      "price": 27.99,
+      "rating": 4.3,
+      "pictureUrl": "https://example.com/dump-truck-deluxe.jpg",
+      "category": "Trucks",
+      "subCategory": "Truck Lorry",
+      "sellerName": "Construction Vehicles",
+      "quantity": 18,
+      "toyDetails": "Transport and unload goods with the Dump Truck Deluxe. It features a tilting bed and durable construction. Perfect for little builders and truck enthusiasts."
+    },
+    {
+        "toyName": "Dump Truck Deluxe",
+        "price": 37.99,
+        "rating": 4.3,
+        "pictureUrl": "https://example.com/dump-truck-deluxe.jpg",
+        "category": "Trucks",
+        "subCategory": "Truck Lorry",
+        "sellerName": "Construction Vehicles",
+        "quantity": 18,
+        "toyDetails": "Transport and unload goods with the Dump Truck Deluxe. It features a tilting bed and durable construction. Perfect for little builders and truck enthusiasts."
+      },
+
+
+      {
+        "toyName": "Off-Road Explorer",
+        "price": 32.99,
+        "rating": 4.5,
+        "pictureUrl": "https://example.com/off-road-explorer.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 5,
+        "toyDetails": "Go on thrilling off-road adventures with the Off-Road Explorer. It features rugged tires, a suspension system, and realistic engine sounds. Suitable for outdoor enthusiasts aged 6 and above."
+      },
+      {
+        "toyName": "Tow Truck Hero",
+        "price": 21.99,
+        "rating": 4.1,
+        "pictureUrl": "https://example.com/tow-truck-hero.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 7,
+        "toyDetails": "Be a hero of the roads with the Tow Truck Hero. It comes with a working tow arm, lights, and sounds. Perfect for imaginative play and vehicle rescue missions."
+      },
+      {
+        "toyName": "Mud Racer Monster",
+        "price": 37.99,
+        "rating": 4.7,
+        "pictureUrl": "https://example.com/mud-racer-monster.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 3,
+        "toyDetails": "Conquer any terrain with the Mud Racer Monster truck. It features oversized wheels, a durable chassis, and a high-powered motor. Get ready for extreme off-road action!"
+      },
+      {
+        "toyName": "City Delivery Van",
+        "price": 18.99,
+        "rating": 4.0,
+        "pictureUrl": "https://example.com/city-delivery-van.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 9,
+        "toyDetails": "Deliver goods across the city with the City Delivery Van. It has realistic detailing, opening doors, and a spacious cargo area. Perfect for role-playing as a delivery driver."
+      },
+      {
+        "toyName": "Garbage Truck Hero",
+        "price": 26.99,
+        "rating": 4.6,
+        "pictureUrl": "https://example.com/garbage-truck-hero.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 6,
+        "toyDetails": "Keep the city clean with the Garbage Truck Hero. It comes with a functioning waste container, lights, and sounds. Encourage environmental awareness and imaginative play."
+      },
+      {
+        "toyName": "City Delivery Van",
+        "price": 18.99,
+        "rating": 4.0,
+        "pictureUrl": "https://example.com/city-delivery-van.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 9,
+        "toyDetails": "Deliver goods across the city with the City Delivery Van. It has realistic detailing, opening doors, and a spacious cargo area. Perfect for role-playing as a delivery driver."
+      },
+      {
+        "toyName": "City Delivery Van",
+        "price": 18.99,
+        "rating": 4.0,
+        "pictureUrl": "https://example.com/city-delivery-van.jpg",
+        "category": "Trucks",
+        "subCategory":"Dump Truck",
+        "sellerName": "Truck zoon",
+        "quantity": 9,
+        "toyDetails": "Deliver goods across the city with the City Delivery Van. It has realistic detailing, opening doors, and a spacious cargo area. Perfect for role-playing as a delivery driver."
+      },
+
+
+
+
+      {
+        "toyName": "Tiny Transporter",
+        "price": 14.99,
+        "rating": 3.8,
+        "pictureUrl": "https://example.com/tiny-transporter.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 10,
+        "toyDetails": "The Tiny Transporter is a compact and adorable mini truck. It features a removable cargo bed and smooth-rolling wheels. Perfect for little truck enthusiasts aged 2 and above."
+      },
+      {
+        "toyName": "Pocket Pickup",
+        "price": 12.99,
+        "rating": 4.2,
+        "pictureUrl": "https://example.com/pocket-pickup.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 8,
+        "toyDetails": "Carry your imagination in your pocket with the Pocket Pickup mini truck. It's small in size but big on fun. Take it anywhere and enjoy imaginative play on the go."
+      },
+      {
+        "toyName": "Speedy Sprinter",
+        "price": 19.99,
+        "rating": 4.5,
+        "pictureUrl": "https://example.com/speedy-sprinter.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 5,
+        "toyDetails": "The Speedy Sprinter is a mini truck that packs a punch. It has a sleek design, speedy wheels, and a surprise pull-back action. Race against friends for endless entertainment."
+      },
+      {
+        "toyName": "Micro Mover",
+        "price": 9.99,
+        "rating": 3.9,
+        "pictureUrl": "https://example.com/micro-mover.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 12,
+        "toyDetails": "Experience big adventures with the Micro Mover mini truck. It's compact in size but built for action. Let your imagination roam free with this little powerhouse."
+      },
+      {
+        "toyName": "Tiny Towing Machine",
+        "price": 17.99,
+        "rating": 4.3,
+        "pictureUrl": "https://example.com/tiny-towing-machine.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 6,
+        "toyDetails": "The Tiny Towing Machine mini truck is perfect for hauling small loads. It features a detachable trailer and a sturdy towing hitch. Let your creativity roll with this adorable toy."
+      },
+      {
+        "toyName": "Mini Monster Racer",
+        "price": 22.99,
+        "rating": 4.7,
+        "pictureUrl": "https://example.com/mini-monster-racer.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 9,
+        "toyDetails": "Unleash mini monster fun with the Mini Monster Racer. It has a compact size, chunky tires, and a fearless attitude. Get ready for epic mini truck adventures!"
+      },
+      {
+        "toyName": "Mini Monster Racer",
+        "price": 22.99,
+        "rating": 4.7,
+        "pictureUrl": "https://example.com/mini-monster-racer.jpg",
+        "category": "Trucks",
+        "subCategory": "Mini Truck",
+        "sellerName": "Truck LOver",
+        "quantity": 9,
+        "toyDetails": "Unleash mini monster fun with the Mini Monster Racer. It has a compact size, chunky tires, and a fearless attitude. Get ready for epic mini truck adventures!"
+      }
+      
+      
+]
+   
+   
