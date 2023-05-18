@@ -1,9 +1,12 @@
+import Banner from "./Banner";
+import TabsList from "./TabsList";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home</h1>
+            <Banner></Banner>
+            <TabsList></TabsList>
         </div>
     );
 };

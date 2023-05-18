@@ -1,11 +1,52 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 
 const Login = () => {
 
-    const handleLogin = event => {
+    const {signIn, googleLogin} = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+
+    const handleLogin = event =>{
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.email.value;
+        console.log(email,password);
+
+        signIn(email, password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            navigate(from, {replace:true})
+        } )
+        .catch(error => console.log(error));
+
     }
+
+
+    const handleGoogleLogin = ()=>{
+        googleLogin()
+        .then(result => {
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            Navigate(from, {replace:true})
+          
+    
+          })
+          .catch(error => {
+            console.log(error);
+           
+          })
+
+      } 
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -38,6 +79,12 @@ const Login = () => {
                     <p className="my-4 text-center"> 
                         New to Kid Toys! <Link to="/signup" className="text-red-600 my-4 text-center">SignUp</Link>
                     </p>
+
+                    <h5>Login with ....</h5>
+      
+      <button className='me-3 btn btn-outline-secondary' onClick={handleGoogleLogin}>google</button>
+      
+    
                 </div>
             </div>
         </div>

@@ -4,10 +4,11 @@ import { AuthContext } from '../../Providers/AuthProviders';
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, userUpdate} = useContext(AuthContext);
 
 
     const handleSignUp = event =>{
+        event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
@@ -15,12 +16,12 @@ const SignUp = () => {
         const password = form.email.value;
         console.log(name, email, photo,password);
 
-        createUser(email, password)
+        createUser(email, password, name, photo)
         .then(result =>{
             const user = result.user;
             console.log(user);
         } )
-        .then(error => console.log(error))
+        .catch(error => console.log(error))
 
     }
     return (
