@@ -55,13 +55,15 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>
       },
-     
+      {
+        path: "/toy/details/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({params})=>{
+          return fetch(`http://localhost:5000/trucks?id=${params?.id}`)
+        }
+      },
 
     ]
-  },
-  {
-    path: "/details",
-    element: <ViewDetails></ViewDetails>,
   },
   
 ]);
