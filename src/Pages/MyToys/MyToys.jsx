@@ -31,12 +31,20 @@ const MyToys = () => {
                 }
             })
     }
+
+    const ascending = () => {
+        const sortedData = [...toys].sort((a, b) => parseInt(a.price) - parseInt(b.price));
+        setToys(sortedData);
+        console.log(toys)
+    }
     return (
         <div>
+            <button onClick={ascending}>Ascending</button>
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,6 +53,7 @@ const MyToys = () => {
                         toys?.map(toy => <>
                             <tr>
                                 <td>{toy?.toyName}</td>
+                                <td>{toy?.price}</td>
                                 <td>
                                     <Link to={`/edit/${toy?._id}`}>Edit</Link>
                                     <button onClick={() => handleConfirmDelete(toy?._id)}>Delete</button>
