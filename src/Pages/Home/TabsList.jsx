@@ -11,9 +11,10 @@ const TabsList = ({allTrucks}) => {
   const miniTrucks = allTrucks?.filter(truck=> truck?.subCategory==="Mini Truck");
   return (
     <div>
+      <h1 className='text-6xl font-bold text-center my-12'>Toy Truck Sub-Category</h1>
       <Tabs>
         <TabList>
-          <Tab>Truck Lorry</Tab>
+          <Tab >Truck Lorry</Tab>
           <Tab>Dump Truck</Tab>
           <Tab>Mini Truck</Tab>
         </TabList>
