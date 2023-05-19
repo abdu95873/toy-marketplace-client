@@ -12,14 +12,22 @@ import { Toaster } from 'react-hot-toast';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='max-w-7xl mx-auto'>
 
-    <React.StrictMode>
-      <AuthProviders>
-        <RouterProvider router={router} />
-        <Toaster />
-      </AuthProviders>
-    </React.StrictMode>,
+
+
+  <div className="bg-lime-300">
+
+    <div className='max-w-7xl mx-auto'>
+      <React.StrictMode>
+        <AuthProviders>
+          <RouterProvider router={router} />
+          <Toaster />
+        </AuthProviders>
+      </React.StrictMode>,
+
+    </div>
+
 
   </div>
+
 )

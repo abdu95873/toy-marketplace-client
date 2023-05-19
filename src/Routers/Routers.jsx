@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/trucks')
+        loader: () => fetch('http://localhost:5000/trucks')
       },
       {
         path: "/login",
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/alltoys",
         element: <AllToys></AllToys>,
-        loader: ()=> fetch('http://localhost:5000/trucks')
+        loader: () => fetch('http://localhost:5000/trucks')
       },
       {
         path: "/mytoys",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/edit/:id",
         element: <PrivateRoute><EditToys></EditToys></PrivateRoute>,
-        loader: ({params})=>{
+        loader: ({ params }) => {
           return fetch(`http://localhost:5000/trucks?id=${params?.id}`)
         }
       },
@@ -58,14 +58,14 @@ const router = createBrowserRouter([
       {
         path: "/toy/details/:id",
         element: <ViewDetails></ViewDetails>,
-        loader: ({params})=>{
+        loader: ({ params }) => {
           return fetch(`http://localhost:5000/trucks?id=${params?.id}`)
         }
       },
 
     ]
   },
-  
+
 ]);
 
 export default router;
