@@ -22,7 +22,7 @@ const AddToys = () => {
             quantity: data?.quantity,
             toyDetails: data?.toyDetails,
         };
-        fetch('http://localhost:5000/toy', {
+        fetch('https://toy-marketplace-server-abdu95873.vercel.app/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const AddToys = () => {
                                         <label className="label">
                                             <span className="label-text">Toy Name</span>
                                         </label>
-                                        <input {...register("toyName")} type="text" placeholder="Toy Name" className="input input-bordered" />
+                                        <input {...register("toyName")} type="text" placeholder="Toy Name" className="input input-bordered" required/>
                                     </div>
 
 
@@ -58,7 +58,7 @@ const AddToys = () => {
                                         <label className="label">
                                             <span className="label-text">Price</span>
                                         </label>
-                                        <input {...register("price")} type="text" placeholder="Price" className="input input-bordered" />
+                                        <input {...register("price")} type="text" placeholder="Price" className="input input-bordered" required/>
                                     </div>
 
 

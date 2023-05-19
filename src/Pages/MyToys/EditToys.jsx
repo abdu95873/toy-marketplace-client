@@ -10,7 +10,7 @@ const EditToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleEditData = (data) => {
         data.id = toy._id;
-        fetch(`http://localhost:5000/toy`, {
+        fetch(`https://toy-marketplace-server-abdu95873.vercel.app/toy`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -22,6 +22,7 @@ const EditToys = () => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
                     toast.success('Toy Updated');
+                    
                 }
             })
     }
@@ -60,7 +61,7 @@ const EditToys = () => {
 
                                 <div className="form-control bg-green-500 h-10 font-bold text-white rounded-md my-10">
 
-                                    <input value='Update' type="submit" />
+                                    <input className='my-auto' value='Update' type="submit" />
 
                                 </div>
                             </div>

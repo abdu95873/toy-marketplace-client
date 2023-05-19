@@ -10,7 +10,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext);
     setTitle('My Toys')
     useEffect(() => {
-        fetch(`http://localhost:5000/trucks?email=${user?.email}`)
+        fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, []);
@@ -20,7 +20,7 @@ const MyToys = () => {
         }
     };
     const handleDetele = id => {
-        fetch(`http://localhost:5000/toy/${id}`, {
+        fetch(`https://toy-marketplace-server-abdu95873.vercel.app/toy/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -12,6 +12,7 @@ import Blog from "../Pages/Blog/Blog";
 import PrivateRoute from "../Routers/PrivateRoutes";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import EditToys from "../Pages/MyToys/EditToys";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/trucks')
+        loader: () => fetch('https://toy-marketplace-server-abdu95873.vercel.app/trucks')
       },
       {
         path: "/login",
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/trucks')
+        loader: () => fetch('https://toy-marketplace-server-abdu95873.vercel.app/trucks')
       },
       {
         path: "/mytoys",
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
         path: "/edit/:id",
         element: <PrivateRoute><EditToys></EditToys></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/trucks?id=${params?.id}`)
+          return fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?id=${params?.id}`)
         }
       },
       {
@@ -57,13 +58,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/toy/details/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:5000/trucks?id=${params?.id}`)
+          return fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?id=${params?.id}`)
         }
       },
 
     ]
+  },
+  {
+    path: "/*",
+    element: <ErrorPage></ErrorPage>,
   },
 
 ]);

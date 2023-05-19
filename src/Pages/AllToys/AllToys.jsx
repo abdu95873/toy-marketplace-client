@@ -19,7 +19,7 @@ const AllToys = () => {
         console.log(data)
         if (data?.toyName != '') {
             setSearched(true)
-            fetch(`http://localhost:5000/trucks?toyName=${data?.toyName}`)
+            fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?toyName=${data?.toyName}`)
                 .then(res => res.json())
                 .then(data => {
                     setToys(data);
@@ -41,7 +41,7 @@ const AllToys = () => {
     return (
         <div>
             <form className='flex justify-end' onSubmit={handleSubmit(handleSearch)}>
-                <input className="input input-bordered input-success w-full max-w-xs" {...register("toyName")} type="text" placeholder="Enter pName" />
+                <input className="input input-bordered input-success w-full max-w-xs" {...register("toyName")} type="text" placeholder="Enter Name" />
                 <input className="btn btn-success ms " value='Search' type="submit" />
             </form>
 
