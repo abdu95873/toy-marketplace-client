@@ -39,8 +39,8 @@ const MyToys = () => {
     }
     return (
         <div>
-            <button className="btn btn-active btn-ghost" onClick={ascending}>Ascending</button>
-            <table className='table w-full'>
+            <button className="btn my-5" onClick={ascending}>Ascending</button>
+            <table className='table w-full my-8'>
                 <thead >
                     <tr className='text-center'>
                     <th>Toy Picture</th>
@@ -53,8 +53,8 @@ const MyToys = () => {
                 <tbody>
                     {
                         toys?.map(toy => <>
-                            <tr >
-                                <td><img className='w-16 h-16' src={toy?.pictureUrl} alt="photo" /></td>
+                            <tr className='text-center'>
+                                <td><img className=' h-16' src={toy?.pictureUrl}  /></td>
                                 <td>{toy?.toyName}</td>
                                 <td>$ {toy?.price}</td>
                                 <td className='space-x-5'>

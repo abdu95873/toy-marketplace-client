@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 
 const AddToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleAddData = (data) => {
         console.log(data);
@@ -38,26 +38,89 @@ const AddToys = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(handleAddData)}>
-                    <input {...register("toyName")} type="text" placeholder="Enter toyName"/>
-                    <input {...register("price")} type="text" placeholder="Enter price"/>
-                    <input {...register("rating")} type="text" placeholder="Enter rating"/>
-                    <input {...register("pictureUrl")} type="text" placeholder="Enter pictureUrl"/>
-                    <input {...register("quantity")} type="text" placeholder="Enter quantity"/>
-                    <input {...register("toyDetails")} type="text" placeholder="Enter toyDetails"/>
+                    <div className="hero min-h-screen bg-base-200">
+                        <div className="hero-content flex-col lg:flex-row-reverse">
 
-                <div>
-                    <label>
-                        
-                    </label>
-                    <select {...register("subCategory")}>
-                        <option disabled selected>Select one</option>
-                        <option>Truck Lorry</option>
-                        <option>Dump Truck</option>
-                        <option>Mini Truck</option>
-                    </select>
-                </div>
+                            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                                <div className="card-body grid md:grid-cols-2">
 
-                <input value='REGISTER' type="submit" />
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Toy Name</span>
+                                        </label>
+                                        <input {...register("toyName")} type="text" placeholder="Toy Name" className="input input-bordered" />
+                                    </div>
+
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Price</span>
+                                        </label>
+                                        <input {...register("price")} type="text" placeholder="Price" className="input input-bordered" />
+                                    </div>
+
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Rating</span>
+                                        </label>
+                                        <input {...register("rating")} type="text" placeholder="Rating" className="input input-bordered" />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Picture</span>
+                                        </label>
+                                        <input {...register("pictureUrl")} type="text" placeholder="Picture" className="input input-bordered" />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Quantity</span>
+                                        </label>
+                                        <input {...register("quantity")} type="text" placeholder="Quantity" className="input input-bordered" />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label">
+                                            <span className="label-text">Details</span>
+                                        </label>
+                                        <input {...register("toyDetails")} type="text-area" placeholder="Details" className="input input-bordered" />
+                                    </div>
+
+
+
+
+                                    <div className=' rounded mb-5'>
+                                    <label className="label">
+                                            <span className="label-text">Sub-Category</span>
+                                        </label>
+                                    <select {...register("subCategory")}>
+                                        <option disabled selected>Select one</option>
+                                        <option>Truck Lorry</option>
+                                        <option>Dump Truck</option>
+                                        <option>Mini Truck</option>
+                                    </select>
+                                    </div>
+
+                                    <div className="form-control bg-green-500 h-10 font-bold text-white rounded-md my-6">
+                                        
+                                        <input value='Add Toy' type="submit" />
+
+                                    </div>
+
+
+                                   
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
             </form>
         </div>
     );
