@@ -4,9 +4,11 @@ import MarqueeSection from "./MarqueeSection";
 import PhoneSection from "./PhoneSection";
 import TabsList from "./TabsList";
 import Gallery from "./Gallery";
+import setTitle from "../../hooks/useTitle";
 
 
 const Home = () => {
+    setTitle('Kids Toy')
     const allTrucks = useLoaderData();
     return (
         <div>

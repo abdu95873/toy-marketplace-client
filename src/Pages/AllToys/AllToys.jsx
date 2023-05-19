@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
+import setTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
+    setTitle('All Toys')
     const allToyes = useLoaderData();
     const tweentyToys = allToyes.slice(0, 5);
 

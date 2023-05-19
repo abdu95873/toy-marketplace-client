@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../Providers/AuthProviders';
 import { toast } from 'react-hot-toast';
+import setTitle from '../../hooks/useTitle';
 
 const AddToys = () => {
+    setTitle('Add Toys')
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { user } = useContext(AuthContext);
 
