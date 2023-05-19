@@ -39,7 +39,7 @@ const MyToys = () => {
     }
     return (
         <div>
-            <button onClick={ascending}>Ascending</button>
+            <button className="btn btn-active btn-ghost" onClick={ascending}>Ascending</button>
             <table className='table w-full'>
                 <thead >
                     <tr className='text-center'>

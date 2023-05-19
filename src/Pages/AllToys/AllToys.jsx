@@ -38,7 +38,7 @@ const AllToys = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit(handleSearch)}>
+            <form className='flex justify-end' onSubmit={handleSubmit(handleSearch)}>
                 <input className="input input-bordered input-success w-full max-w-xs" {...register("toyName")} type="text" placeholder="Enter pName" />
                 <input className="btn btn-success ms " value='Search' type="submit" />
             </form>
@@ -69,7 +69,8 @@ const AllToys = () => {
 
                                 <p>Rating:{toy?.rating} </p>
                                 <div className="card-actions">
-                                    <button className="btn btn-primary">View Details</button>
+
+                                    <button className="btn btn-primary"> <Link to={`/toy/details/${toy?._id}`}>Details</Link></button>
                                 </div>
                             </div>
                         </div>
