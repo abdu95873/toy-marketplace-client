@@ -5,7 +5,7 @@ import { toast } from 'react-hot-toast';
 
 const AllToys = () => {
     const allToyes = useLoaderData();
-    const tweentyToys = allToyes.slice(0,5);
+    const tweentyToys = allToyes.slice(0, 5);
 
     const [toys, setToys] = useState(tweentyToys);
     const [click, setClick] = useState(false);
@@ -15,15 +15,15 @@ const AllToys = () => {
 
     const handleSearch = (data) => {
         console.log(data)
-        if(data?.toyName != ''){
+        if (data?.toyName != '') {
             setSearched(true)
             fetch(`http://localhost:5000/trucks?toyName=${data?.toyName}`)
-            .then(res=>res.json())
-            .then(data=>{
-                setToys(data);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    setToys(data);
+                })
         }
-        else{
+        else {
             setSearched(false)
             setToys(tweentyToys)
         }
@@ -39,48 +39,57 @@ const AllToys = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(handleSearch)}>
-                <input {...register("toyName")} type="text" placeholder="Enter price" />
-                <input value='REGISTER' type="submit" />
+                <input className="input input-bordered input-success w-full max-w-xs" {...register("toyName")} type="text" placeholder="Enter pName" />
+                <input className="btn btn-success ms " value='Search' type="submit" />
             </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Action</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        toys?.map(toy => <>
-                            <tr>
-                                <td>{toy?.toyName}</td>
-                                <td>{toy?.price}</td>
-                                <td>
-                                    <Link to={`/edit/${toy?._id}`}>Edit</Link>
-                                    <button onClick={() => handleConfirmDelete(toy?._id)}>Delete</button>
-                                </td>
-                                <td>
-                                    <Link to={`/toy/details/${toy?._id}`}>Details</Link>
-                                </td>
-                            </tr>
-                        </>)
-                    }
-                </tbody>
-            </table>
+
+            <div className="grid grid-cols-3 justify-between space-y-5 my-5">
+
+                {
+                    toys?.map(toy => <>
+                       
+                        <div className="card w-96 bg-base-100 shadow-xl ">
+                            <figure className="px-10 pt-10">
+                                <img src={toy?.pictureUrl} alt="Shoes" className="rounded-xl" />
+                            </figure>
+                            <div className="card-body items-center text-center">
+                                <h2 className="card-title">{toy?.toyName}</h2>
+
+                                <p>Seller:{toy?.sellerName} </p>
+
+                                <p>Sub-category
+                                    :{toy?.subCategory} </p>
+
+                                <p>Price:{toy?.price} </p>
+
+                                <p>Available Quantity
+                                    :{toy?.quantity} </p>
+
+
+
+                                <p>Rating:{toy?.rating} </p>
+                                <div className="card-actions">
+                                    <button className="btn btn-primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </>)
+                }
+            </div>
+            <div className='flex justify-center'>
             {
-                click && !searched?
-                <button onClick={seeLess}>See Less</button>
-                :
-                <></>
+                click && !searched ?
+                    <button className="btn btn-primary my-10" onClick={seeLess}>See Less</button>
+                    :
+                    <></>
             }
             {
-                !click && !searched?
-                <button onClick={seeAll}>See All</button>
-                :
-                <></>
+                !click && !searched ?
+                    <button className="btn btn-primary my-10" onClick={seeAll}>See All</button>
+                    :
+                    <></>
             }
+            </div>
         </div>
     );
 };

@@ -40,23 +40,34 @@ const MyToys = () => {
     return (
         <div>
             <button onClick={ascending}>Ascending</button>
-            <table>
-                <thead>
-                    <tr>
+            <table className='table w-full'>
+                <thead >
+                    <tr className='text-center'>
+                    <th>Toy Picture</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Action</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         toys?.map(toy => <>
-                            <tr>
+                            <tr >
+                                <td><img className='w-16 h-16' src={toy?.pictureUrl} alt="photo" /></td>
                                 <td>{toy?.toyName}</td>
-                                <td>{toy?.price}</td>
-                                <td>
+                                <td>$ {toy?.price}</td>
+                                <td className='space-x-5'>
+                                    <button className="btn btn-warning">
                                     <Link to={`/edit/${toy?._id}`}>Edit</Link>
-                                    <button onClick={() => handleConfirmDelete(toy?._id)}>Delete</button>
+                                    </button>
+                                    <button className="btn btn-error" onClick={() => handleConfirmDelete(toy?._id)}>Delete</button>
+                                </td>
+                                <td>
+                                    <button className="btn btn-active btn-primary">
+                                    <Link to={`/toy/details/${toy?._id}`}>Details</Link>
+                                    </button>
+                                    
                                 </td>
                             </tr>
                         </>)
