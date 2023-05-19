@@ -76,7 +76,7 @@ const Navbar = () => {
 {
     user ?
         <></> :
-        <Link to="/register">
+        <Link to="/signup">
             <button className="btn btn-accent">Register</button>
 
         </Link>

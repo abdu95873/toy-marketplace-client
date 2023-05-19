@@ -8,7 +8,7 @@ import setTitle from '../../hooks/useTitle';
 const MyToys = () => {
     const [toys, setToys] = useState([]);
     const { user } = useContext(AuthContext);
-    setTitle('MyToys')
+    setTitle('My Toys')
     useEffect(() => {
         fetch(`http://localhost:5000/trucks?email=${user?.email}`)
             .then(res => res.json())
@@ -18,7 +18,7 @@ const MyToys = () => {
         if (window.confirm('Are you sure you want to delete this toy?')) {
             handleDetele(id);
         }
-      };
+    };
     const handleDetele = id => {
         fetch(`http://localhost:5000/toy/${id}`, {
             method: 'DELETE'
@@ -43,7 +43,7 @@ const MyToys = () => {
             <table className='table w-full my-8'>
                 <thead >
                     <tr className='text-center'>
-                    <th>Toy Picture</th>
+                        <th>Toy Picture</th>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Action</th>
@@ -54,20 +54,20 @@ const MyToys = () => {
                     {
                         toys?.map(toy => <>
                             <tr className='text-center'>
-                                <td><img className=' h-16' src={toy?.pictureUrl}  /></td>
+                                <td><img className=' h-16' src={toy?.pictureUrl} /></td>
                                 <td>{toy?.toyName}</td>
                                 <td>$ {toy?.price}</td>
                                 <td className='space-x-5'>
                                     <button className="btn btn-warning">
-                                    <Link to={`/edit/${toy?._id}`}>Edit</Link>
+                                        <Link to={`/edit/${toy?._id}`}>Edit</Link>
                                     </button>
                                     <button className="btn btn-error" onClick={() => handleConfirmDelete(toy?._id)}>Delete</button>
                                 </td>
                                 <td>
                                     <button className="btn btn-active btn-primary">
-                                    <Link to={`/toy/details/${toy?._id}`}>Details</Link>
+                                        <Link to={`/toy/details/${toy?._id}`}>Details</Link>
                                     </button>
-                                    
+
                                 </td>
                             </tr>
                         </>)
