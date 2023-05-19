@@ -1,4 +1,4 @@
-Live Link: https://toy-marketplace-client-512a4.web.app/addtoys
+Live Link: https://toy-marketplace-client-512a4.web.app/
 
 
 5 bullet point :
