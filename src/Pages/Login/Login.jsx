@@ -37,7 +37,7 @@ const Login = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                Navigate(from, { replace: true })
+                navigate(from, { replace: true })
 
 
             })

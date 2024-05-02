@@ -10,7 +10,7 @@ const EditToys = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const handleEditData = (data) => {
         data.id = toy._id;
-        fetch(`https://toy-marketplace-server-abdu95873.vercel.app/toy`, {
+        fetch(`http://localhost:5000/toy`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

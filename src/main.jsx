@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
 
-  <div className="bg-lime-300">
+  <div>
 
     <div className='max-w-7xl mx-auto'>
       <React.StrictMode>

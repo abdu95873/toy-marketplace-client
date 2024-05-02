@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://toy-marketplace-server-abdu95873.vercel.app/trucks')
+        loader: () => fetch('https://toy-marketplace-server-two.vercel.app/trucks')
       },
       {
         path: "/login",
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "/alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch('https://toy-marketplace-server-abdu95873.vercel.app/trucks')
+        loader: () => fetch('https://toy-marketplace-server-two.vercel.app/trucks')
       },
       {
         path: "/mytoys",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         path: "/edit/:id",
         element: <PrivateRoute><EditToys></EditToys></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?id=${params?.id}`)
+          return fetch(`https://toy-marketplace-server-two.vercel.app/trucks?id=${params?.id}`)
         }
       },
       {
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         path: "/toy/details/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?id=${params?.id}`)
+          return fetch(`https://toy-marketplace-server-two.vercel.app/trucks?id=${params?.id}`)
         }
       },
 

@@ -6,14 +6,14 @@ const Dump = ({ dumps }) => {
     console.log(threeLories)
     return (
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-3 justify-between ">
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 justify-center md:justify-between ">
             {
                 threeLories?.map(dump => <>
 
 
                     <div className="card w-96 bg-base-100 shadow-xl my-4">
                         <figure className="px-10 pt-10">
-                            <img src={dump?.pictureUrl} alt="Shoes" className="rounded-xl" />
+                            <img src={dump?.pictureUrl} alt="toy" className="rounded-xl" />
                         </figure>
                         <div className="card-body items-center text-center">
                             <h2 className="card-title">{dump?.toyName}</h2>

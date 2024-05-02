@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const PhoneSection = () => {
     return (
-        <div>      <h1 className='text-6xl font-bold text-center my-12'>Added Section</h1>
+        <div>      <h1 className='text-4xl md:text-6xl font-bold text-center my-12 px-5 bg-lime-300 py-5 '>Added Section</h1>
 
             \ <div className='flex content-center my-12'>
                 <div className="mockup-phone ">

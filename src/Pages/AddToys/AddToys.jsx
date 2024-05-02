@@ -22,7 +22,7 @@ const AddToys = () => {
             quantity: data?.quantity,
             toyDetails: data?.toyDetails,
         };
-        fetch('https://toy-marketplace-server-abdu95873.vercel.app/toy', {
+        fetch('http://localhost:5000/toy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

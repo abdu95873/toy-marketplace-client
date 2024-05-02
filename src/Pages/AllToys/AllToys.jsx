@@ -19,7 +19,7 @@ const AllToys = () => {
         console.log(data)
         if (data?.toyName != '') {
             setSearched(true)
-            fetch(`https://toy-marketplace-server-abdu95873.vercel.app/trucks?toyName=${data?.toyName}`)
+            fetch(`https://toy-marketplace-server-two.vercel.app/trucks?toyName=${data?.toyName}`)
                 .then(res => res.json())
                 .then(data => {
                     setToys(data);
@@ -45,14 +45,14 @@ const AllToys = () => {
                 <input className="btn btn-success ms " value='Search' type="submit" />
             </form>
 
-            <div className="grid grid-cols-3 justify-between space-y-5 my-5">
+            <div className="grid md:grid-cols-3 justify-center md:justify-between space-y-5 my-5">
 
                 {
                     toys?.map(toy => <>
                        
-                        <div className="card w-96 bg-base-100 shadow-xl ">
+                        <div className="card w-80 bg-base-100 shadow-xl ">
                             <figure className="px-10 pt-10">
-                                <img src={toy?.pictureUrl} alt="Shoes" className="rounded-xl" />
+                                <img src={toy?.pictureUrl} alt="Toys" className="rounded-xl" />
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{toy?.toyName}</h2>

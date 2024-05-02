@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 const MarqueeSection = () => {
   return (
     <div>
-      <h1 className='text-6xl font-bold text-center my-12'>Toy Truck Marquee</h1>
+      <h1 className='text-4xl md:text-6xl font-bold text-center my-12 px-5 bg-lime-300 py-5'>Toy Truck Marquee</h1>
 
       <Marquee className='my-12'>
         <div className="card w-96 bg-base-100 shadow-xl mx-5">
